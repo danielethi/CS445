@@ -1,24 +1,24 @@
 #these are images added using markdown formating 
 
 #git init
-![](gitinit.png)
+![image](gitinit.png)
 #git status
-![](gitstatus.png)
+![image](gitstatus.png)
 #git diff
-![](gitdiff.png)
+![image](gitdiff.png)
 #git log
 
-![](gitlog.png)
+![image](gitlog.png)
 
 
 #git commit --amend
-![](gitamend.png)
+![image](gitamend.png)
 
 #git show
-![](gitshow.png)
+![image](gitshow.png)
 
 #git checkout
-![](checkout.png)
+![image](checkout.png)
 
 
 
