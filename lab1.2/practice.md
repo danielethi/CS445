@@ -1,4 +1,16 @@
-# this is MarkDown test
+# this is MarkDown test on labs
+
+#this is clone
+![img](clone.png)
+
+#this is fetch
+![img](gitfetch.png)
+
+#this is remote
+![img](remote.png)
+
+#this is pullRequest
+![img](pullrequest.png)
 
 # Heading One
 ## Heading Two
