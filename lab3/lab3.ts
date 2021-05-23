@@ -1,38 +1,71 @@
 //AnswerQ1
-declare function University(name: any, dept: any): void;
-declare class University {
-    constructor(name: any, dept: any);
-    name: any;
-    dept: any;
-    graduation: (year: any) => void;
-}
-declare var miu: any;
+function University(name:string,dept:string){
+     this.name=name;
+     this.dept=dept;
+     this.graduation = function(year:number) { 
+        console.log(`Graduating ${this.dept} ${year} students`); 
+   } 
+} 
+var miu = new Univeristy("MIU", "Computer Science"); 
+miu.graduation(2019);
+
+
+
 
 //AnswerQ2
 
-declare namespace bankAccount {
-    const money: number;
-    function deposit(value: any): void;
-    function deposit(value: any): void;
-}
-declare namespace myself {
-    export const name: string;
-    export { bankAccount };
-    export const hobbies: string[];
-}
+let bankAccount = { 
+	money: 2000, 
+	deposit(value):void { 
+		this.money += value; 
+	} 
+}; 
 
+let myself = { 
+	name: "Asaad", 
+	bankAccount: bankAccount, 
+	hobbies: ["Violin", "Cooking"] 
+}; 
+
+myself.bankAccount.deposit(3000); 
+console.log(myself);
 
 
 //AnswerQ3
 
-declare function Car(name: any): void;
-declare var car: any;
+class Car{
+    constructor(name:string,acceleration:number){
+         this.name=name;
+         this.acceleration=0;
+      this.honk=function():void{
+        console.log(` ${this.name} is saying: Toooooooooot!`); 
+      }
+      this.accelerate = function(speed):number { 
+		this.acceleration = this.acceleration + speed; 
+	} 
+}
+var car = new Car("BMW"); 
+car.honk(); // BMW is saying: Toooooooooot!
+console.log(car.acceleration); // 0
+car.accelerate(60); 
+console.log(car.acceleration); // 60
 
 
 
 //AnswerQ4
-declare var baseObject: {
-    width: number;
-    length: number;
-};
-declare var rectangle: any;
+class baseObject={
+    constructor(width:number, length:number)
+        this.width=0;
+        this.length=0;
+}
+
+rectangle extends baseObject{
+    constructor(width:number,length:number)
+     this..width=5;
+     this.length=2;
+
+     rectangle.calcSize=function(){
+         return thiswidth*this.length;
+     }
+}
+console.log(rectangle.calcSize()); // 10
