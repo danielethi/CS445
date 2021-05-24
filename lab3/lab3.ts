@@ -14,17 +14,17 @@ miu.graduation(2019);
 
 //AnswerQ2
 
-let bankAccount = { 
+let bankAccount :{money:number;deposit:(value:number)=>void}={ 
 	money: 2000, 
-	deposit(value):void { 
+	deposit(value);void{ 
 		this.money += value; 
 	} 
 }; 
 
 let myself = { 
 	name: "Asaad", 
-	bankAccount: bankAccount, 
-	hobbies: ["Violin", "Cooking"] 
+	bankAccount:typeof bankAccount; 
+	hobbies: string[]
 }; 
 
 myself.bankAccount.deposit(3000); 
@@ -34,14 +34,17 @@ console.log(myself);
 //AnswerQ3
 
 class Car{
-    constructor(name:string,acceleration:number){
-         this.name=name;
-         this.acceleration=0;
-      this.honk=function():void{
+    pbulci acceleration:number=0;
+
+    constructor(public name:string){
+    }
+    honk() :void{
         console.log(` ${this.name} is saying: Toooooooooot!`); 
-      }
-      this.accelerate = function(speed):number { 
+    }; 
+    accelerate = function(speed) { 
 		this.acceleration = this.acceleration + speed; 
+	} 
+    }
 	} 
 }
 var car = new Car("BMW"); 
@@ -54,18 +57,17 @@ console.log(car.acceleration); // 60
 
 //AnswerQ4
 class baseObject={
-    constructor(width:number, length:number)
-        this.width=0;
-        this.length=0;
+    constructor(public width:number=0, public length=0:number)
+  
 }
 
-rectangle extends baseObject{
-    constructor(width:number,length:number)
-     this..width=5;
-     this.length=2;
+class Rectangle extends baseObject{
+   
+  clacSize(){
+      return this.width*this.length;
+  }
 
-     rectangle.calcSize=function(){
-         return thiswidth*this.length;
-     }
+    
 }
+const rectangle=new Rectangele(5,2)
 console.log(rectangle.calcSize()); // 10
