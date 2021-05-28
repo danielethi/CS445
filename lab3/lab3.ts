@@ -1,12 +1,14 @@
 //AnswerQ1
-function University(name:string,dept:string){
-     this.name=name;
-     this.dept=dept;
-     this.graduation = function(year:number) { 
+class University{
+    constructor(public name:string, private dept: string){
+    }
+    
+    graduation(year:number){
         console.log(`Graduating ${this.dept} ${year} students`); 
-   } 
-} 
-var miu = new Univeristy("MIU", "Computer Science"); 
+    }
+}
+
+var miu = new (University as any)("MIU", "Computer Science"); 
 miu.graduation(2019);
 
 
@@ -14,17 +16,20 @@ miu.graduation(2019);
 
 //AnswerQ2
 
-let bankAccount :{money:number;deposit:(value:number)=>void}={ 
+let bankAccount: {money: number; deposit: (value: number) => void} = { 
 	money: 2000, 
-	deposit(value);void{ 
+	deposit(value:number):void { 
 		this.money += value; 
 	} 
 }; 
-
-let myself = { 
+let myself: {
+    name: string;
+    bankAccount: typeof bankAccount;
+    hobbies: string[];
+} = { 
 	name: "Asaad", 
-	bankAccount:typeof bankAccount; 
-	hobbies: string[]
+	bankAccount: bankAccount, 
+	hobbies: ["Violin", "Cooking"] 
 }; 
 
 myself.bankAccount.deposit(3000); 
@@ -34,19 +39,17 @@ console.log(myself);
 //AnswerQ3
 
 class Car{
-    pbulci acceleration:number=0;
-
-    constructor(public name:string){
+    public acceleration: number = 0;
+    constructor(public name: string){
     }
-    honk() :void{
+    honk():void{
         console.log(` ${this.name} is saying: Toooooooooot!`); 
-    }; 
-    accelerate = function(speed) { 
-		this.acceleration = this.acceleration + speed; 
-	} 
     }
-	} 
+    accelerate(speed: number):void{
+        this.acceleration = this.acceleration + speed; 
+    }
 }
+
 var car = new Car("BMW"); 
 car.honk(); // BMW is saying: Toooooooooot!
 console.log(car.acceleration); // 0
