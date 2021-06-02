@@ -1,0 +1,66 @@
+{
+    "results": [
+      {
+        "gender": "female",
+        "name": {
+          "title": "Mrs",
+          "first": "Fatma",
+          "last": "Numanoğlu"
+        },
+        "location": {
+          "street": {
+            "number": 9529,
+            "name": "Atatürk Sk"
+          },
+          "city": "Giresun",
+          "state": "Trabzon",
+          "country": "Turkey",
+          "postcode": 24321,
+          "coordinates": {
+            "latitude": "71.6970",
+            "longitude": "31.0824"
+          },
+          "timezone": {
+            "offset": "-8:00",
+            "description": "Pacific Time (US & Canada)"
+          }
+        },
+        "email": "fatma.numanoglu@example.com",
+        "login": {
+          "uuid": "7aa2f05c-2f38-44a6-85e6-417c3284e595",
+          "username": "happyelephant195",
+          "password": "usmarine",
+          "salt": "8nFsNAYw",
+          "md5": "3afc11aca446cfe6b905cc8f7d46a2fd",
+          "sha1": "677670b89f6a34857b14cf013ec565c72de9887c",
+          "sha256": "15e8e06dda3c1af7b10f0c91c63a8f84a2383d3a00d193d9140f341f3bb15dca"
+        },
+        "dob": {
+          "date": "1968-09-03T08:08:32.344Z",
+          "age": 53
+        },
+        "registered": {
+          "date": "2015-07-27T13:59:43.974Z",
+          "age": 6
+        },
+        "phone": "(152)-935-3701",
+        "cell": "(876)-683-0384",
+        "id": {
+          "name": "",
+          "value": null
+        },
+        "picture": {
+          "large": "https://randomuser.me/api/portraits/women/21.jpg",
+          "medium": "https://randomuser.me/api/portraits/med/women/21.jpg",
+          "thumbnail": "https://randomuser.me/api/portraits/thumb/women/21.jpg"
+        },
+        "nat": "TR"
+      }
+    ],
+    "info": {
+      "seed": "ff3361a937057e74",
+      "results": 1,
+      "page": 1,
+      "version": "1.3"
+    }
+}
