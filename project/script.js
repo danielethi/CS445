@@ -2,13 +2,20 @@ windows.onload=function(){
     //fetchUser('https://randomuser.me/api/')
  
  
- document.getElementById('refbtn').onclick=refreshUser
+ document.getElementById('btn1').onclick=displayhUser
  refreshUser();
  }
- function refreshUser(){
+ function displayUser(){
  
-     fetchUser('https://randomuser.me/api/')
+     fetchUser('http://jsonplaceholder.typicode.com/posts')
+   
  }
+
+ window.onload = function(){
+    const url = 'http://www.mapquestapi.com/geocoding/v1/reverse?key=tWbaBBw92lD6YInMlGnx6xwwj8GpGZVO&location=30.333472,-81.470448';
+    fetch(url).then(response => response.json())
+        .then(console.log);
+}
  
  async function fetchUser(URL){
    let response = await fetch(URL)
