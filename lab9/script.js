@@ -1,3 +1,5 @@
+
+//lab9
 class Subject {
     observers = {};
 
