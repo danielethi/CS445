@@ -3,7 +3,6 @@ class User {
         this.name = name;
     }
 }
-
 class DecoratedUser {
 
     constructor(user, street, city) {
@@ -12,14 +11,11 @@ class DecoratedUser {
         this.street = street;
         this.city = city;
     }
-
     logger() {
         console.log("Decorated User: " + this.name + ", " +
             this.street + ", " + this.city);
     };
 }
-
 var user = new User("Kelly");
-
 var decorated = new DecoratedUser(user, "Broadway", "New York");
 decorated.logger();

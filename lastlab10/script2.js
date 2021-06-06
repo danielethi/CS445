@@ -3,26 +3,21 @@ class Info {
         console.info(msg);
     }
 }
-
 class Warn {
     logging(msg) {
         console.warn(msg);
     }
 }
-
 class Error {
     logging(msg) {
         console.error(msg);
     }
 }
-
 class Table {
     logging(msg) {
         console.table(msg);
     }
 }
-
-
 class Strategy {
     loggingMethod = "";
 
@@ -34,7 +29,6 @@ class Strategy {
         this.loggingMethod.logging(msg);
     }
 };
-
 
 const strategy = new Strategy();
 

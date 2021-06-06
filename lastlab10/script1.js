@@ -1,9 +1,7 @@
 var fibonacci = (function() {
     var memo = {};
-
     function f(n) {
         var value;
-
         if (n in memo) {
             value = memo[n];
         } else {
@@ -11,14 +9,10 @@ var fibonacci = (function() {
                 value = n;
             else
                 value = f(n - 1) + f(n - 2);
-
             memo[n] = value;
         }
-
         return value;
     }
-
     return f;
 })();
-
 console.log(fibonacci(8));
