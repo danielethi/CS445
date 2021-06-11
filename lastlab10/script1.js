@@ -1,3 +1,4 @@
+//memoization
 var fibonacci = (function() {
     var memo = {};
     function f(n) {
